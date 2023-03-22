@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+
+    >
+
+
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+    <LinearLayout
+        android:id="@+id/fullscreen_content_final_result_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+
+
+        android:orientation="vertical"
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:id="@+id/fullscreen_content"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:gravity="center"
+            android:keepScreenOn="true"
+            android:text="Obrigado! \n\n Estamos processando seus dados..."
+            android:textColor="@color/red_color_th"
+            android:textSize="30sp"
+            android:layout_margin="30sp"
+            android:textStyle="bold" />
+
+
+        <ImageView
+            android:id="@+id/fullscreen_content_loading"
+            android:layout_width="70sp"
+            android:layout_height="70sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10sp"
+            android:contentDescription="Loading"
+            android:src="@drawable/loading_png"
+
+
+            >
+
+
+        </ImageView>
+    </LinearLayout>
+
+
+    <ScrollView
+        android:id="@+id/scrollViewResult"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:flow_verticalAlign="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:visibility="visible"
+        android:gravity="center_horizontal"
+        >
+
+        <LinearLayout
+            android:id="@+id/fullscreen_content_final_result_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp"
+            android:gravity="center_vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            android:visibility="visible"
+            >
+
+        <TextView
+            android:id="@+id/liveness_label_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/result_liveness"
+            android:textSize="18sp"
+            />
+
+        <TextView
+            android:id="@+id/liveness_result_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Aprovado"
+            android:textColor="@color/green"
+            >
+
+        </TextView>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/selfie_image_view"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            tools:src="@drawable/face" />
+
+        <TextView
+                android:id="@+id/facematch_label_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:layout_gravity="center"
+                android:paddingTop="10dp"
+                android:text="Resultado do Facematch"
+                android:textSize="18sp"
+                >
+
+            </TextView>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/doc_image_view"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+
+            android:layout_gravity="center"
+            android:rotation="-90"
+            tools:src="@drawable/cnh" />
+
+        <ScrollView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/facematch_scrollView"
+            android:outlineAmbientShadowColor="@color/green_th"
+            android:outlineSpotShadowColor="@color/green_th"
+            android:scrollbarAlwaysDrawVerticalTrack="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center">
+
+
+                <TextView
+                    android:id="@+id/facematch_result_json"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:overScrollMode="always"
+                    android:text="[\r    {\r        BIO: {\r            IDBIOMETRIA: 11033,\r            Similaridade: Não determinada,\r            Biometria: Não reconhecido - Similaridade não determinada,\r            JsonAWS: {\r                Message: An error has occurred.,\r                ExceptionMessage: 2 validation errors detected: Value 'java.nio.HeapByteBuffer[pos=0 lim=0 cap=0]' at 'sourceImage.bytes' failed to satisfy constraint: Member must have length greater than or equal to 1; Value 'java.nio.HeapByteBuffer[pos=0 lim=0 cap=0]' at 'targetImage.bytes' failed to satisfy constraint: Member must have length greater than or equal to 1,\r                ExceptionType: Amazon.Rekognition.AmazonRekognitionException,\r                StackTrace:    at Amazon.Runtime.Internal.HttpErrorResponseExceptionHandler.HandleExceptionStream(IRequestContext requestContext, IWebResponseData httpErrorResponse, HttpErrorResponseException exception, Stream responseStream)\r\r   at Amazon.Runtime.Internal.HttpErrorResponseExceptionHandler.HandleException(IExecutionContext executionContext, HttpErrorResponseException exception)\r\r   at Amazon.Runtime.Internal.ErrorHandler.ProcessException(IExecutionContext executionContext, Exception exception)\r\r   at Amazon.Runtime.Internal.ErrorHandler.InvokeSync(IExecutionContext executionContext)\r\r   at Amazon.Runtime.Internal.CallbackHandler.InvokeSync(IExecutionContext executionContext)\r\r   at Amazon.Runtime.Internal.EndpointDiscoveryHandler.InvokeSync(IExecutionContext executionContext)\r\r   at Amazon.Runtime.Internal.RetryHandler.InvokeSync(IExecutionContext executionContext)\r\r   at Amazon.Runtime.Internal.CallbackHandler.InvokeSync(IExecutionContext executionContext)\r\r   at Amazon.Runtime.Internal.CallbackHandler.InvokeSync(IExecutionContext executionContext)\r\r   at Amazon.Runtime.Internal.ErrorCallbackHandler.InvokeSync(IExecutionContext executionContext)\r\r   at Amazon.Runtime.Internal.MetricsHandler.InvokeSync(IExecutionContext executionContext)\r\r   at Amazon.Runtime.Internal.RuntimePipeline.InvokeSync(IExecutionContext executionContext)\r\r   at Amazon.Runtime.AmazonServiceClient.Invoke[TResponse](AmazonWebServiceRequest request, InvokeOptionsBase options)\r\r   at TH_WS_R.Repository.ConsultaITH_BiodocumentoscopiaFMRepository.facematch(Requisicao imagens, String Ip) in C:\\Users\\Douglas\\Desktop\\TH_WS_R_comDocumentoscopiaECheckHybrid\\TH_WS_R\\Repository\\ConsultaITH_BiodocumentoscopiaFMRepository.cs:line 59\r\r   at TH_WS_R.Services.ConsultaITH_BiodocumentoscopiaFMService.realizarConsulta(Requisicao req) in C:\\Users\\Douglas\\Desktop\\TH_WS_R_comDocumentoscopiaECheckHybrid\\TH_WS_R\\Services\\ConsultaITH_BiodocumentoscopiaFMService.cs:line 51\r\r   at TH_WS_R.Controllers.ITH_BiodocumentoscopiaFMController.Post(RequisicaoAWSFMPost DATA, String sCliente, String sUsuario, String sSenha) in C:\\Users\\Douglas\\Desktop\\TH_WS_R_comDocumentoscopiaECheckHybrid\\TH_WS_R\\Controllers\\ITH_BiodocumentoscopiaFMController.cs:line 39,\r                InnerException: {\r                    Message: An error has occurred.,\r                    ExceptionMessage: The remote server returned an error: (400) Bad Request.,\r                    ExceptionType: Amazon.Runtime.Internal.HttpErrorResponseException,\r                    StackTrace:    at Amazon.Runtime.Internal.HttpRequest.GetResponse()\r\r   at Amazon.Runtime.Internal.HttpHandler`1.InvokeSync(IExecutionContext executionContext)\r\r   at Amazon.Runtime.Internal.Unmarshaller.InvokeSync(IExecutionContext executionContext)\r\r   at Amazon.Runtime.Internal.ErrorHandler.InvokeSync(IExecutionContext executionContext),\r                    InnerException: {\r                        Message: An error has occurred.,\r                        ExceptionMessage: The remote server returned an error: (400) Bad Request.,\r                        ExceptionType: System.Net.WebException,\r                        StackTrace:    at System.Net.HttpWebRequest.GetResponse()\r\r   at Amazon.Runtime.Internal.HttpRequest.GetResponse()\r                    }\r                }\r            }\r        }\r    }\r]"
+                    android:textAlignment="center"
+                    android:textColor="@color/green">
+
+                </TextView>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+        <TextView
+            android:id="@+id/ocr_label_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:layout_gravity="center"
+            android:paddingTop="10dp"
+            android:text="Resultado do OCR"
+            android:textSize="18sp"
+            >
+
+            </TextView>
+
+
+            <ScrollView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:id="@+id/ocr_scrollview"
+                android:outlineAmbientShadowColor="@color/green_th"
+                android:outlineSpotShadowColor="@color/green_th"
+                android:scrollbarAlwaysDrawVerticalTrack="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center">
+
+
+                    <TextView
+                        android:id="@+id/ocr_result_json"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:overScrollMode="always"
+                        android:text="[\r    {\r        BIO: {\r            IDBIOMETRIA: 11033,\r            Similaridade: Não determinada,\r            Biometria: Não reconhecido - Similaridade não determinada,\r            JsonAWS: {\r                Message: An error has occurred.,\r                ExceptionMessage: 2 validation errors detected: Value 'java.nio.HeapByteBuffer[pos=0 lim=0 cap=0]' at 'sourceImage.bytes' failed to satisfy constraint: Member must have length greater than or equal to 1; Value 'java.nio.HeapByteBuffer[pos=0 lim=0 cap=0]' at 'targetImage.bytes' failed to satisfy constraint: Member must have length greater than or equal to 1,\r                ExceptionType: Amazon.Rekognition.AmazonRekognitionException,\r                StackTrace:    at Amazon.Runtime.Internal.HttpErrorResponseExceptionHandler.HandleExceptionStream(IRequestContext requestContext, IWebResponseData httpErrorResponse, HttpErrorResponseException exception, Stream responseStream)\r\r   at Amazon.Runtime.Internal.HttpErrorResponseExceptionHandler.HandleException(IExecutionContext executionContext, HttpErrorResponseException exception)\r\r   at Amazon.Runtime.Internal.ErrorHandler.ProcessException(IExecutionContext executionContext, Exception exception)\r\r   at Amazon.Runtime.Internal.ErrorHandler.InvokeSync(IExecutionContext executionContext)\r\r   at Amazon.Runtime.Internal.CallbackHandler.InvokeSync(IExecutionContext executionContext)\r\r   at Amazon.Runtime.Internal.EndpointDiscoveryHandler.InvokeSync(IExecutionContext executionContext)\r\r   at Amazon.Runtime.Internal.RetryHandler.InvokeSync(IExecutionContext executionContext)\r\r   at Amazon.Runtime.Internal.CallbackHandler.InvokeSync(IExecutionContext executionContext)\r\r   at Amazon.Runtime.Internal.CallbackHandler.InvokeSync(IExecutionContext executionContext)\r\r   at Amazon.Runtime.Internal.ErrorCallbackHandler.InvokeSync(IExecutionContext executionContext)\r\r   at Amazon.Runtime.Internal.MetricsHandler.InvokeSync(IExecutionContext executionContext)\r\r   at Amazon.Runtime.Internal.RuntimePipeline.InvokeSync(IExecutionContext executionContext)\r\r   at Amazon.Runtime.AmazonServiceClient.Invoke[TResponse](AmazonWebServiceRequest request, InvokeOptionsBase options)\r\r   at TH_WS_R.Repository.ConsultaITH_BiodocumentoscopiaFMRepository.facematch(Requisicao imagens, String Ip) in C:\\Users\\Douglas\\Desktop\\TH_WS_R_comDocumentoscopiaECheckHybrid\\TH_WS_R\\Repository\\ConsultaITH_BiodocumentoscopiaFMRepository.cs:line 59\r\r   at TH_WS_R.Services.ConsultaITH_BiodocumentoscopiaFMService.realizarConsulta(Requisicao req) in C:\\Users\\Douglas\\Desktop\\TH_WS_R_comDocumentoscopiaECheckHybrid\\TH_WS_R\\Services\\ConsultaITH_BiodocumentoscopiaFMService.cs:line 51\r\r   at TH_WS_R.Controllers.ITH_BiodocumentoscopiaFMController.Post(RequisicaoAWSFMPost DATA, String sCliente, String sUsuario, String sSenha) in C:\\Users\\Douglas\\Desktop\\TH_WS_R_comDocumentoscopiaECheckHybrid\\TH_WS_R\\Controllers\\ITH_BiodocumentoscopiaFMController.cs:line 39,\r                InnerException: {\r                    Message: An error has occurred.,\r                    ExceptionMessage: The remote server returned an error: (400) Bad Request.,\r                    ExceptionType: Amazon.Runtime.Internal.HttpErrorResponseException,\r                    StackTrace:    at Amazon.Runtime.Internal.HttpRequest.GetResponse()\r\r   at Amazon.Runtime.Internal.HttpHandler`1.InvokeSync(IExecutionContext executionContext)\r\r   at Amazon.Runtime.Internal.Unmarshaller.InvokeSync(IExecutionContext executionContext)\r\r   at Amazon.Runtime.Internal.ErrorHandler.InvokeSync(IExecutionContext executionContext),\r                    InnerException: {\r                        Message: An error has occurred.,\r                        ExceptionMessage: The remote server returned an error: (400) Bad Request.,\r                        ExceptionType: System.Net.WebException,\r                        StackTrace:    at System.Net.HttpWebRequest.GetResponse()\r\r   at Amazon.Runtime.Internal.HttpRequest.GetResponse()\r                    }\r                }\r            }\r        }\r    }\r]"
+                        android:textAlignment="center"
+                        android:textColor="@color/green">
+
+                    </TextView>
+
+
+                </LinearLayout>
+
+            </ScrollView>
+
+
+            <Button
+            android:id="@+id/result_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/red_color_th"
+            android:text="Reiniciar"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="64dp"
+            />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

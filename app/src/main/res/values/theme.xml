@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/black</item>
+
+
+    </style>
+
+
+    <style name="SDKTheme.Ex" parent="@style/SDKTheme">
+        <item name="android:immersive">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+
+        <item name="tipsTextStyle">@style/TipsText.Ex</item>
+        <item name="buttonStyle">@style/Button.Ex</item>
+        <item name="tipsLayoutStyle">@style/TipsLayout.Ex</item>
+        <item name="closeButtonStyle">@style/CloseButton.Ex</item>
+        <item name="progressBarStyle">@style/ProgressBar.Ex</item>
+        <item name="overlayPositiveColorStyle">#752219</item>
+        <item name="overlayNegativeColorStyle">@android:color/holo_purple</item>
+        <item name="showDetectedOverlay">true</item>
+    </style>
+
+    <style name="ProgressBar.Ex" parent="@style/ProgressBar">
+    </style>
+
+    <style name="CloseButton.Ex" parent="@style/CloseButton">
+        <item name="android:src">@mipmap/close</item>
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <style name="TipsLayout.Ex" parent="@style/TipsLayout">
+        <item name="android:background">@drawable/tips_layout_ex</item>
+    </style>
+
+    <style name="TipsText.Ex" parent="@style/TipsText">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textSize">@dimen/margin_medium</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Button.Ex" parent="@style/Button">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textSize">@dimen/margin_medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="backgroundTint">@android:color/holo_green_light</item>
+    </style>
+
+
+</resources>

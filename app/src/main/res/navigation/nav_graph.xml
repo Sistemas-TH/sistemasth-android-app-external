@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/welcomeFragment  "
+    >
+
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="br.com.sistemasthexample.sistemasth.MainActivity"
+        android:label="main_activity"
+        tools:layout="@layout/activity_main">
+    </activity>
+    <fragment
+        android:id="@+id/instructionsLivenessFragment"
+        android:name="br.com.sistemasthexample.sistemasth.fragments.LivenessInstructionsFragment"
+        tools:layout="@layout/fragment_instructions" >
+        <action
+            android:id="@+id/action_instructionsFragment_to_documentInstructionsFragment"
+            app:destination="@id/documentInstructionsFragment" />
+        <action
+            android:id="@+id/action_instructionsLivenessFragment_to_finalResultFragment"
+            app:destination="@id/finalResultFragment" />
+    </fragment>
+
+    <action
+        android:id="@+id/action_to_welcomeFragment"
+        app:destination="@id/welcomeFragment" />
+    <action
+        android:id="@+id/action_to_faceDetectionResultFragment"
+        app:destination="@id/faceDetectionResultFragment" />
+
+    <fragment
+        android:id="@+id/finalResultFragment"
+        android:name="br.com.sistemasthexample.sistemasth.fragments.FinalResultFragment"
+
+        android:defaultValue="0"
+        tools:layout="@layout/fragment_final_result">
+        <argument
+            android:name="result"
+            app:argType="br.com.sistemasthexample.sistemasth.models.ResponseBody"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_finalResultFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/faceDetectionResultFragment"
+        android:name="br.com.sistemasthexample.sistemasth.fragments.FaceDetectionResultFragment"
+        tools:layout="@layout/fragment_face_detection_result">
+        <argument
+            android:name="result"
+            app:argType="br.com.sistemasthexample.sistemasth.FaceDetectionResult" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/documentInstructionsFragment"
+        android:name="br.com.sistemasthexample.sistemasth.fragments.DocumentInstructionsFragment"
+        android:label="DocumentInstructionsFragment"
+        tools:layout="@layout/fragment_instructions">
+        <action
+            android:id="@+id/action_documentInstructionsFragment_to_documentDetectionResultFragment"
+            app:destination="@id/finalResultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="br.com.sistemasthexample.sistemasth.fragments.WelcomeFragment"
+        android:label="WelcomeFragment"
+
+        tools:layout="@layout/fragment_welcome">
+        <action
+            android:id="@+id/action_welcomeFragment_to_dataValidFragment"
+            app:destination="@id/dataValidFragment" />
+        <action
+            android:id="@+id/action_welcomeFragment_to_instructionsLivenessFragment"
+            app:destination="@id/instructionsLivenessFragment" />
+        <action
+            android:id="@+id/action_welcomeFragment_to_documentInstructionsFragment"
+            app:destination="@id/documentInstructionsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dataValidFragment"
+        android:name="br.com.sistemasthexample.sistemasth.fragments.DataValidFragment"
+        android:label="fragment_use_datavalid"
+        tools:layout="@layout/fragment_use_datavalid" >
+        <action
+            android:id="@+id/action_dataValidFragment_to_getCpfFragment"
+            app:destination="@id/getCpfFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/getCpfFragment"
+        android:name="br.com.sistemasthexample.sistemasth.fragments.GetCpfFragment"
+        android:label="fragment_get_cpf"
+        tools:layout="@layout/fragment_get_cpf" >
+        <action
+            android:id="@+id/action_getCpfFragment_to_livenessInstructionsFragment"
+            app:destination="@id/instructionsLivenessFragment" />
+        <action
+            android:id="@+id/action_getCpfFragment_to_documentInstructionsFragment2"
+            app:destination="@id/documentInstructionsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="br.com.sistemasthexample.sistemasth.ui.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
+    </fragment>
+
+
+</navigation>

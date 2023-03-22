@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:mask="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="376dp"
+        android:layout_height="match_parent"
+
+        android:layout_marginLeft="@dimen/normal_font_size">
+
+
+        <TextView
+            android:id="@+id/title_get_cpf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="256dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/please_give_your_id_number"
+            android:textColor="@color/black"
+            android:textSize="@dimen/normal_font_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/error_message_cpf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CPF inválido. Por favor, digite novamente."
+            android:textColor="@color/red_color_th"
+            android:textSize="@dimen/small_font_size"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textInputLayout" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+
+            android:layout_marginTop="64dp"
+            android:layout_marginEnd="16dp"
+
+            android:hint="CPF"
+            app:counterEnabled="false"
+
+
+            app:endIconMode="clear_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_get_cpf"
+            app:startIconDrawable="@drawable/ic_person"
+            app:startIconTint="@color/black">
+
+
+            <br.com.sapereaude.maskedEditText.MaskedEditText
+                android:id="@+id/editTextCPF"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+
+
+                android:hint="00000000000"
+                android:inputType="number"
+                android:textAlignment="center"
+                app:keep_hint="true"
+                android:text="410.181.188-10"
+                android:textSize="@dimen/normal_font_size"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title_get_cpf"
+                mask:allowed_chars="0123456789-A"
+
+                mask:mask="###.###.###-##" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_next"
+
+            android:layout_width="fill_parent"
+            android:layout_height="57dp"
+            android:layout_gravity="start"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="36dp"
+
+            android:backgroundTint="@color/green_th"
+
+            android:enabled="false"
+            android:text="Iniciar Fluxo de Validação"
+
+            android:textColor="@color/white"
+            app:cornerRadius="35dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.504"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/error_message_cpf">
+
+
+        </com.google.android.material.button.MaterialButton>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

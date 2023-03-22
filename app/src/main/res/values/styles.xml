@@ -1,0 +1,34 @@
+<resources>
+
+    <style name="textAppearanceButton">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textSize">@dimen/margin_medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="backgroundTint">@android:color/holo_green_light</item>
+    </style>
+
+    <style name="MyTextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:textColorHint">@color/white</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="boxStrokeColor">@color/white</item>
+    </style>
+
+    <style name="MyTextInputEditText" parent="ThemeOverlay.MaterialComponents.TextInputEditText.OutlinedBox.Dense">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="CustomOutlineBox" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <item name="boxStrokeColor">@color/white</item>
+        <item name="android:textColorHint">@color/white</item>
+        <item name="hintTextColor">@color/white</item>
+
+    </style>
+    <style name="AppMaterialButton" parent="Widget.MaterialComponents.Button.UnelevatedButton">  <item name="android:backgroundTint">@color/button_disabled</item> </style>
+    <style name="Widget.AppTheme.ButtonBar.Fullscreen" parent="">
+        <item name="android:background">@color/black_overlay</item>
+        <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
+    </style>
+</resources>

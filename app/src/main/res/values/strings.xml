@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Biometria TH</string>
+
+    <string name="yes">Sim</string>
+    <string name="no">Não</string>
+    <string name="close">Fechar</string>
+    <string name="do_you_want_capture_another_document_image">Deseja capturar outra imagem do documento?</string>
+    <string name="coming_soon">Essa feature estará disponível em breve.</string>
+    <string name="url_server">https://liveness.sistemasth.com.br/api/</string>
+    <string name="url_server2">https://local.delcantao.dev/api-liveness/</string>
+
+    <!--FaceDetectionResultFragment-->
+    <string name="verification_completed_successfully">Verificação concluída com sucesso</string>
+    <string name="congratulations_your_facial_check_has_been_successfully_completed">Parabéns, sua verificação facial foi concluída com sucesso!</string>
+    <string name="text_continue">Continuar</string>
+    <string name="verification_could_not_be_completed">Não foi possível concluir a verificação</string>
+    <string name="please_try_to_take_your_photo_again">Por favor tente tirar a sua foto novamente.</string>
+    <string name="try_again">Tentar novamente</string>
+
+    <!--InstructionsFragment-->
+    <string name="instructions">Instruções</string>
+    <string name="warning">Aviso</string>
+    <string name="instructions_face">Instruções para captura da Face</string>
+    <string name="instructions_doc">Instruções para captura do documento</string>
+    <string name="auto_capture">Captura Automática</string>
+    <string name="manual_capture">Captura Manual</string>
+    <string name="position_your_nose_on_the_point">Surgirá um ponto, você deve posicionar seu nariz nele.</string>
+    <string name="position_your_face_centered_in_the_enclosed_area">Posicione o seu rosto  centralizado na área delimitada.</string>
+    <string name="keep_a_neutral_expression_app_instruction">Mantenha uma expressão neutra.</string>
+    <string name="keep_your_eyes_open_app_instruction">Mantenha os olhos abertos.</string>
+    <string name="look_for_a_well_lit_place">Procure um local bem iluminado.</string>
+    <string name="if_possible_be_in_a_white_background">Se possível, posicione-se em fundo branco.</string>
+    <string name="remove_any_type_of_accessory">Retire qualquer tipo de acessório.</string>
+    <string name="homolog_token_old">62dffdf748128a48bc4fd85f:e1Hfi-rm-l_SHXM2GYacFBPp</string>
+    <string name="homolog_token">630f5ffac1ca7ca24627a538:sHy7UJBivyiTI2nzW_0kTnnd</string>
+
+    <!-- DocumentInstructionsFragment -->
+    <string name="position_your_document_centered_in_the_enclosed_area">Posicione o documento centralizado na área delimitada pela câmera.</string>
+    <string name="keep_your_device_steady_and_avoid_tilting">Mantenha o smartphone firme durante a captura e evite inclinar.</string>
+    <string name="place_the_document_without_a_cover_on_a_table">Coloque o documento sem capa sobre uma mesa.</string>
+    <string name="ocr_request_failed">OCR Falhou, para maiores detalhes verifique o log.\nDeseja tentar novamente?</string>
+    <string name="requesting_ocr">Solicitando OCR</string>
+    <string name="requesting_biometry">Realizando consultas de biometria</string>
+
+    <!-- DocumentDetectionResultFragment -->
+    <string name="data_obtained_successfully">Dados obtidos com sucesso</string>
+    <string name="unable_to_get_the_data">Não foi possível obter os dados</string>
+    <string name="name">Nome: %1$s</string>
+    <string name="birthdate">Data de Nascimento: %1$s</string>
+    <string name="mothers_name">Nome da mãe: %1$s</string>
+    <string name="document_id">RG: %1$s</string>
+    <string name="federal_revenue_number">CPF: %1$s</string>
+    <string name="please_try_again_take_document_image">Por favor tente capturar a imagem do seu documento novamente.</string>
+
+    <!-- Welcome -->
+    <string name="welcome_to_th">Bem vindo a demo da</string>
+    <string name="th">Sistemas TH</string>
+    <string name="use_data_valid">Deseja utilizar o Data Valid?</string>
+    <string name="how_can_assist">Selecione abaixo as features que deseja experimentar:</string>
+    <string name="take_document_flow">Capturar um documento</string>
+    <string name="take_face_flow">Capturar uma face</string>
+
+
+    <string name="button_liveness">Prova de Vida</string>
+    <string name="button_documentscopy">Documentoscopia</string>
+    <string name="please_give_your_id_number">Por gentileza, informe o seu CPF</string>
+
+
+    <string name="button_facematch_with_data_valid">Realizar Facematch c/ Data Valid</string>
+    <string name="button_facematch_without_data_valid">Realizar Facematch s/ Data Valid</string>
+    <string name="button_ocr_with_data_valid">Realizar OCR c/ Data Valid</string>
+    <string name="button_ocr_without_data_valid">Realizar OCR s/ Data Valid</string>
+
+    <string name="button_facematch">Facematch</string>
+    <string name="button_ocr">OCR do documento</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sim">Sim</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Usuário</string>
+    <string name="prompt_password">Senha</string>
+    <string name="action_sign_in">Entrar</string>
+    <string name="action_sign_in_short">Entrar</string>
+    <string name="welcome">"Bem vindo!"</string>
+    <string name="invalid_username">Usuário inválido</string>
+    <string name="invalid_password">Senha precisa ter mais que 5 caracteres</string>
+    <string name="login_failed">"Credenciais Inválidas"</string>
+    <string name="login_success">"Login realizado com sucesso"</string>
+
+
+    <string name="java_entry_title" translatable="false">Run the ML Kit quickstart written in Java</string>
+    <string name="kotlin_entry_title" translatable="false">Run the ML Kit quickstart written in Kotlin</string>
+    <string name="ok" translatable="false">OK</string>
+    <string name="permission_camera_rationale" translatable="false">Access to the camera is needed for detection</string>
+    <string name="no_camera_permission" translatable="false">This application cannot run because it does not have the camera permission.  The application will now exit.</string>
+    <string name="low_storage_error" translatable="false">Face detector dependencies cannot be downloaded due to low device storage</string>
+    <string name="toggle_turn_on" translatable="false">Front</string>
+    <string name="toggle_turn_off" translatable="false">Back</string>
+    <string name="desc_camera_source_activity" translatable="false">Vision detectors demo with live camera preview</string>
+    <string name="desc_still_image_activity" translatable="false">Vision detectors demo with a still image</string>
+    <string name="desc_camerax_live_preview_activity" translatable="false">Vision detectors demo with live preview using CameraX. Note that CameraX is only supported on API 21+</string>
+    <string name="desc_cameraxsource_demo_activity" translatable="false">Object detection with custom classifier using ML Kit CameraXSource API. Note that CameraX is only supported on API 21+</string>
+    <string name="download_error" translatable="false">Download error</string>
+    <string name="start_over" translatable="false">Start over</string>
+    <string name="menu_item_settings" translatable="false">Settings</string>
+    <string name="select_image" translatable="false">Select image</string>
+    <string name="custom_object_detection" translatable="false">Custom Object Detector</string>
+
+    <!-- Settings related strings. -->
+    <string name="pref_screen" translatable="false">ps</string>
+    <string name="pref_screen_title_live_preview" translatable="false">Live preview settings</string>
+    <string name="pref_screen_title_still_image" translatable="false">Still image settings</string>
+    <string name="pref_screen_title_camerax_live_preview" translatable="false">CameraX live preview settings</string>
+    <string name="pref_screen_title_cameraxsource_demo" translatable="false">CameraXSource live preview settings</string>
+    <string name="pref_category_info" translatable="false">Detection Info</string>
+    <string name="pref_category_face_detection" translatable="false">Face Detection</string>
+    <string name="pref_category_object_detection" translatable="false">Object Detection / Custom Object Detection</string>
+    <string name="pref_category_automl" translatable="false">AutoML Image Labeling</string>
+    <string name="pref_category_pose_detection" translatable="false">Pose Detection</string>
+    <string name="pref_category_segmentation" translatable="false">Selfie Segmentation</string>
+    <string name="pref_category_text_recognition" translatable="false">Text Recognition</string>
+
+    <!-- Strings for camera settings. -->
+    <string name="pref_category_key_camera" translatable="false">pckc</string>
+    <string name="pref_category_title_camera" translatable="false">Camera</string>
+    <string name="pref_key_rear_camera_preview_size" translatable="false">rcpvs</string>
+    <string name="pref_key_rear_camera_picture_size" translatable="false">rcpts</string>
+    <string name="pref_key_front_camera_preview_size" translatable="false">fcpvs</string>
+    <string name="pref_key_front_camera_picture_size" translatable="false">fcpts</string>
+    <string name="pref_key_camerax_rear_camera_target_resolution" translatable="false">crctas</string>
+    <string name="pref_key_camerax_front_camera_target_resolution" translatable="false">cfctas</string>
+    <string name="pref_key_camera_live_viewport" translatable="false">clv</string>
+    <string name="pref_title_rear_camera_preview_size" translatable="false">Rear camera preview size</string>
+    <string name="pref_title_front_camera_preview_size" translatable="false">Front camera preview size</string>
+    <string name="pref_title_camerax_rear_camera_target_resolution" translatable="false">CameraX rear camera target resolution</string>
+    <string name="pref_title_camerax_front_camera_target_resolution" translatable="false">CameraX front camera target resolution</string>
+    <string name="pref_title_camera_live_viewport" translatable="false">Enable live viewport</string>
+    <string name="pref_summary_camera_live_viewport" translatable="false">Do not block camera preview drawing on detection</string>
+
+    <!-- Strings for info preference. -->
+    <string name="pref_title_info_hide" translatable="false">Hide detection info</string>
+    <string name="pref_key_info_hide" translatable="false">ih</string>
+
+    <!-- Strings for text recognition preference. -->
+    <string name="pref_title_group_recognized_text_in_blocks" translatable="false">Group recognized text in paragraphs</string>
+    <string name="pref_key_group_recognized_text_in_blocks" translatable="false">grtib</string>
+    <string name="pref_title_show_language_tag" translatable="false">Show language identified</string>
+    <string name="pref_key_show_language_tag" translatable="false">slt</string>
+    <string name="pref_title_show_text_confidence" translatable="false">Show confidence score</string>
+    <string name="pref_key_show_text_confidence" translatable="false">stc</string>
+
+    <!-- Strings for object detector enable multiple objects preference. -->
+    <string name="pref_title_object_detector_enable_multiple_objects" translatable="false">Enable multiple objects</string>
+    <string name="pref_key_live_preview_object_detector_enable_multiple_objects" translatable="false">lpodemo</string>
+    <string name="pref_key_still_image_object_detector_enable_multiple_objects" translatable="false">siodemo</string>
+
+    <!-- Strings for object detector enable classification preference. -->
+    <string name="pref_title_object_detector_enable_classification" translatable="false">Enable classification</string>
+    <string name="pref_key_live_preview_object_detector_enable_classification" translatable="false">lpodec</string>
+    <string name="pref_key_still_image_object_detector_enable_classification" translatable="false">siodec</string>
+
+    <!-- Strings for face detector landmark mode preference. -->
+    <string name="pref_title_face_detector_landmark_mode" translatable="false">Landmark mode</string>
+    <string name="pref_key_live_preview_face_detection_landmark_mode" translatable="false">lpfdlm</string>
+    <string name="pref_entries_face_detector_landmark_mode_no_landmarks" translatable="false">No landmarks</string>
+    <string name="pref_entries_face_detector_landmark_mode_all_landmarks" translatable="false">All landmarks</string>
+    <!-- The following entry values must match the ones in FaceDetectorOptions#LandmarkMode -->
+    <string name="pref_entry_values_face_detector_landmark_mode_no_landmarks" translatable="false">1</string>
+    <string name="pref_entry_values_face_detector_landmark_mode_all_landmarks" translatable="false">2</string>
+
+    <!-- Strings for face detector contour mode preference. -->
+    <string name="pref_title_face_detector_contour_mode" translatable="false">Contour mode</string>
+    <string name="pref_key_live_preview_face_detection_contour_mode" translatable="false">lpfdcm</string>
+    <string name="pref_entries_face_detector_contour_mode_no_contours" translatable="false">No contours</string>
+    <string name="pref_entries_face_detector_contour_mode_all_contours" translatable="false">All contours</string>
+    <!-- The following entry values must match the ones in FaceDetectorOptions#ContourMode -->
+    <string name="pref_entry_values_face_detector_contour_mode_no_contours" translatable="false">1</string>
+    <string name="pref_entry_values_face_detector_contour_mode_all_contours" translatable="false">2</string>
+
+    <!-- Strings for face detector classification mode preference. -->
+    <string name="pref_title_face_detector_classification_mode" translatable="false">Classification mode</string>
+    <string name="pref_key_live_preview_face_detection_classification_mode" translatable="false">lpfdcfm</string>
+    <string name="pref_entries_face_detector_classification_mode_no_classifications" translatable="false">No classifications</string>
+    <string name="pref_entries_face_detector_classification_mode_all_classifications" translatable="false">All classifications</string>
+    <!-- The following entry values must match the ones in FaceDetectorOptions#ClassificationMode -->
+    <string name="pref_entry_values_face_detector_classification_mode_no_classifications" translatable="false">1</string>
+    <string name="pref_entry_values_face_detector_classification_mode_all_classifications" translatable="false">2</string>
+
+    <!-- Strings for face detector performance mode preference. -->
+    <string name="pref_title_face_detector_performance_mode" translatable="false">Performance mode</string>
+    <string name="pref_key_live_preview_face_detection_performance_mode" translatable="false">lpfdpm</string>
+    <string name="pref_entries_face_detector_performance_mode_fast" translatable="false">Fast</string>
+    <string name="pref_entries_face_detector_performance_mode_accurate" translatable="false">Accurate</string>
+    <!-- The following entry values must match the ones in FaceDetectorOptions#PerformanceMode -->
+    <string name="pref_entry_values_face_detector_performance_mode_fast" translatable="false">1</string>
+    <string name="pref_entry_values_face_detector_performance_mode_accurate" translatable="false">2</string>
+
+    <!-- Strings for face detector face tracking preference. -->
+    <string name="pref_title_face_detector_face_tracking" translatable="false">Face tracking</string>
+    <string name="pref_key_live_preview_face_detection_face_tracking" translatable="false">lpfdft</string>
+
+    <!-- Strings for face detector min face size preference. -->
+    <string name="pref_title_face_detector_min_face_size" translatable="false">Minimum face size</string>
+    <string name="pref_key_live_preview_face_detection_min_face_size" translatable="false">lpfdmfs</string>
+    <string name="pref_dialog_message_face_detector_min_face_size" translatable="false">Proportion of the head width to the image width, and the valid value range is [0.0, 1.0]</string>
+    <string name="pref_toast_invalid_min_face_size" translatable="false">Minimum face size must be a float value and in the range [0.0, 1.0]</string>
+
+    <!-- Strings for pose detector performance mode preference. -->
+    <string name="pref_title_pose_detector_performance_mode" translatable="false">Performance mode</string>
+    <string name="pref_key_live_preview_pose_detection_performance_mode" translatable="false">lppdpm</string>
+    <string name="pref_key_still_image_pose_detection_performance_mode" translatable="false">sipdpm</string>
+    <string name="pref_entries_pose_detector_performance_mode_fast" translatable="false">Fast</string>
+    <string name="pref_entries_pose_detector_performance_mode_accurate" translatable="false">Accurate</string>
+    <string name="pref_entry_values_pose_detector_performance_mode_fast" translatable="false">1</string>
+    <string name="pref_entry_values_pose_detector_performance_mode_accurate" translatable="false">2</string>
+
+    <!-- Strings for pose detector prefer gpu preference. -->
+    <string name="pref_title_pose_detector_prefer_gpu" translatable="false">Prefer using GPU</string>
+    <string name="pref_key_pose_detector_prefer_gpu" translatable="false">pdpg</string>
+    <string name="pref_summary_pose_detector_prefer_gpu" translatable="false">If enabled, GPU will be used as long as it is available, stable and returns correct results. In this case, the detector will not check if GPU is really faster than CPU.</string>
+
+    <!-- Strings for pose detector showInFrameLikelihood preference. -->
+    <string name="pref_title_pose_detector_show_in_frame_likelihood" translatable="false">Show in-frame likelihood</string>
+    <string name="pref_key_live_preview_pose_detector_show_in_frame_likelihood" translatable="false">lppdsifl</string>
+    <string name="pref_key_still_image_pose_detector_show_in_frame_likelihood" translatable="false">sipdsifl</string>
+
+    <!-- Strings for pose detector z value visualization preference. -->
+    <string name="pref_title_pose_detector_visualize_z" translatable="false">Visualize z value</string>
+    <string name="pref_key_pose_detector_visualize_z" translatable="false">pdvz</string>
+    <string name="pref_title_pose_detector_rescale_z" translatable="false">Rescale z value for visualization</string>
+    <string name="pref_key_pose_detector_rescale_z" translatable="false">pdrz</string>
+
+    <!-- Strings for pose classification preference. -->
+    <string name="pref_title_pose_detector_run_classification" translatable="false">Run Classification</string>
+    <string name="pref_key_pose_detector_run_classification" translatable="false">pdrc</string>
+    <string name="pref_summary_pose_detector_run_classification" translatable="false">Classify squat and pushup poses. Count reps in streaming mode. To get the best classification results based on the current sample data, face the camera side way and make sure your full body is in the frame.</string>
+
+    <!-- Strings for segmentation preference. -->
+    <string name="pref_title_segmentation_raw_size_mask" translatable="false">Enable raw size mask</string>
+    <string name="pref_key_segmentation_raw_size_mask" translatable="false">srsm</string>
+
+    <string name="pref_group_title_face_mesh" translatable="false">Face Mesh Detection</string>
+    <string name="pref_title_face_mesh_use_case" translatable="false">Use Case</string>
+    <string name="pref_key_face_mesh_use_case" translatable="false">face_mesh_use_case</string>
+    <string name="tokenString">token</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_camera_capture_document">CameraCaptureDocument</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+
+
+    <!-- Strings for the instructions in the liveness. -->
+    <string name="wait_for_the_white_nose_point">Aguarde o surgimento do ponto do nariz</string>
+    <string name="look_at_the_camera">Olhe para a câmera</string>
+    <string name="nose_position">Posicione o nariz no ponto</string>
+    <string name="ending">Finalizando...</string>
+    <string name="put_the_face_inside_the_box">Posicione o rosto dentro da caixa</string>
+    <string name="result_liveness">Resultado da Prova de Vida</string>
+</resources>

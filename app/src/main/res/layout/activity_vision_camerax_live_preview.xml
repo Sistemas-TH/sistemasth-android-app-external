@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:theme="@style/ThemeOverlay.THBiometriaMLKIT.FullscreenContainer"
+    android:id="@+id/FrameLayout_loading_fragment"
+    >
+
+  <!-- The primary full-screen view. This can be replaced with whatever view
+       is needed to present your content, e.g. VideoView, SurfaceView,
+       TextureView, etc. -->
+  <TextView
+      android:id="@+id/fullscreen_content"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:gravity="center"
+      android:keepScreenOn="true"
+      android:text="Obrigado! \n\n Estamos processando sua prova de vida"
+      android:textColor="@color/red_color_th"
+      android:textSize="30sp"
+      android:layout_margin="30sp"
+      android:textStyle="bold" />
+
+
+  <ImageView
+      android:id="@+id/fullscreen_content_image_X"
+      android:layout_width="70sp"
+      android:layout_height="70sp"
+      android:src="@drawable/loading_png"
+      android:layout_gravity="center"
+      android:layout_marginTop="140sp"
+      android:contentDescription="Loading"
+
+
+      >
+
+
+
+
+  </ImageView>
+
+  <!-- This FrameLayout insets its children based on system windows using
+       android:fitsSystemWindows. -->
+  <FrameLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:fitsSystemWindows="true">
+
+
+
+    <LinearLayout
+        android:id="@+id/fullscreen_content_controls"
+        style="@style/Widget.AppTheme.ButtonBar.Fullscreen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:orientation="horizontal"
+        tools:ignore="UselessParent">
+
+
+    </LinearLayout>
+  </FrameLayout>
+
+
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:id="@+id/constraintLayout_CameraX"
+
+      android:keepScreenOn="true">
+
+
+    <!--  <Spinner-->
+    <!--      android:id="@+id/spinner_ending"-->
+    <!--      android:layout_width="fill_parent"-->
+    <!--      android:layout_height="fill_parent"-->
+    <!--      android:layout_gravity="center"-->
+    <!--      app:layout_constraintLeft_toLeftOf="@id/preview_view"-->
+    <!--      app:layout_constraintRight_toRightOf="@id/preview_view"-->
+    <!--      app:layout_constraintTop_toTopOf="parent"-->
+    <!--      app:layout_constraintBottom_toTopOf="@+id/control"-->
+    <!--      />-->
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/preview_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/control"/>
+
+    <br.com.sistemasthexample.GraphicOverlay
+        android:id="@+id/graphic_overlay"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="@id/preview_view"
+        app:layout_constraintRight_toRightOf="@id/preview_view"
+        app:layout_constraintTop_toTopOf="@id/preview_view"
+        app:layout_constraintBottom_toBottomOf="@id/preview_view"/>
+
+    <TextView
+        android:layout_marginTop="10sp"
+        android:layout_marginBottom="70sp"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Instruções"
+        android:textColor="#fcbe11"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/textView_instructions" />
+        />
+
+
+    <include
+        android:id="@+id/settings_button"
+        layout="@layout/settings_style"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="@id/preview_view"
+        app:layout_constraintTop_toTopOf="@id/preview_view" />
+
+    <LinearLayout
+        android:id="@id/control"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="#000"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+      <ToggleButton
+          android:id="@+id/facing_switch"
+          android:layout_width="48dp"
+          android:layout_height="48dp"
+          android:layout_gravity="center_vertical"
+          android:background="@drawable/toggle_style"
+          android:checked="false"
+          android:textOff=""
+          android:textOn=""/>
+
+      <Spinner
+          android:id="@+id/spinner"
+          android:layout_width="0dp"
+          android:layout_weight="1"
+          android:layout_height="wrap_content"
+
+          android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
+
+

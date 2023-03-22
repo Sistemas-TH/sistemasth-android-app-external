@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dataValidScreen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.DataValidFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+<!--    <TextView-->
+<!--        android:id="@+id/title"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginBottom="128dp"-->
+<!--        android:text="Deseja utilizar o Data Valid?"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:fontFamily="@font/roboto_bold"
+        android:gravity="top"
+        android:text="@string/use_data_valid"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/normal_font_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.324" />
+
+
+
+    <com.google.android.material.button.MaterialButton
+
+        android:id="@+id/yes"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+
+        android:layout_gravity="start"
+
+
+        android:layout_marginEnd="128dp"
+        android:layout_marginBottom="@dimen/margin_button_bottom"
+        android:backgroundTint="@color/green_th"
+        android:enabled="true"
+        android:text="Sim"
+        android:textColor="@color/white"
+        app:cornerRadius="35dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintEnd_toEndOf="parent"
+
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title">
+
+
+    </com.google.android.material.button.MaterialButton>
+
+
+    <com.google.android.material.button.MaterialButton
+
+        android:id="@+id/no"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+
+        android:layout_gravity="start"
+
+
+        android:layout_marginStart="128dp"
+        android:layout_marginBottom="@dimen/margin_button_bottom"
+        android:backgroundTint="@color/green_th"
+        android:enabled="true"
+        android:text="Não"
+        android:textColor="@color/white"
+        app:cornerRadius="35dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title">
+
+
+    </com.google.android.material.button.MaterialButton>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

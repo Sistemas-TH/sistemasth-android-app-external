@@ -1,0 +1,222 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:paddingStart="1dp"
+android:paddingTop="8dp"
+android:id="@+id/constraintLayout_WelcomeFragment"
+android:paddingEnd="2dp">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/linearLayout"
+    android:layout_width="385dp"
+    android:layout_height="671dp"
+    android:layout_marginStart="@dimen/squares_font_size"
+    android:layout_marginTop="16dp"
+    android:layout_marginEnd="@dimen/squares_font_size"
+    android:gravity="left"
+    android:orientation="vertical"
+    android:visibility="visible"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.875"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:visibility="visible">
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/roboto_bold"
+        android:gravity="top"
+        android:text="@string/welcome_to_th"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:gravity="top"
+        android:text="@string/th"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:fontFamily="@font/roboto_bold"
+        android:gravity="top"
+        android:text="@string/how_can_assist"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/normal_font_size"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+
+    <!--        <Button-->
+    <!--            android:id="@+id/face_detection_flow_button"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:width="1000dp"-->
+    <!--            android:backgroundTint="@color/red_color_th"-->
+    <!--            android:text="@string/take_face_flow"-->
+    <!--            android:textColor="@color/white"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toBottomOf="@+id/ok_lets_go_button"-->
+    <!--            tools:visibility="gone" />-->
+
+    <!--        <Button-->
+    <!--            android:id="@+id/document_detection_flow_button"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:width="1000dp"-->
+    <!--            android:backgroundTint="@color/red_color_th"-->
+    <!--            android:text="@string/take_document_flow"-->
+    <!--            android:textColor="@color/white"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toBottomOf="@+id/face_detection_flow_button"-->
+    <!--            tools:visibility="gone" />-->
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_liveness"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        android:layout_marginTop="44dp"
+        android:width="@dimen/squares"
+        android:height="@dimen/squares"
+        android:text="@string/button_liveness"
+        android:textColor="@color/red_color_th"
+
+        android:textSize="@dimen/squares_font_size"
+        app:backgroundTint="@color/white"
+        app:iconPadding="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_facematch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:rippleColor="@color/red_color_th"
+        app:strokeColor="@color/red_color_th"
+        app:strokeWidth="1sp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_documentoscopy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:width="@dimen/squares"
+        android:height="@dimen/squares"
+        android:text="@string/button_documentscopy"
+        android:textColor="@color/red_color_th"
+        android:textSize="@dimen/squares_font_size"
+        app:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_facematch"
+        app:rippleColor="@color/red_color_th"
+        app:strokeColor="@color/red_color_th"
+        app:strokeWidth="1sp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_facematch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="16dp"
+        android:width="@dimen/squares"
+        android:height="@dimen/squares"
+        android:text="@string/button_facematch"
+        android:textColor="@color/red_color_th"
+        android:textSize="@dimen/squares_font_size"
+        app:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:rippleColor="@color/red_color_th"
+        app:strokeColor="@color/red_color_th"
+        app:strokeWidth="1sp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_ocr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:width="@dimen/squares"
+        android:height="@dimen/squares"
+        android:text="@string/button_ocr"
+        android:textColor="@color/red_color_th"
+        android:textSize="@dimen/squares_font_size"
+        app:backgroundTint="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/btn_documentoscopy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_liveness"
+        app:rippleColor="@color/red_color_th"
+        app:strokeColor="@color/red_color_th"
+        app:strokeWidth="1sp">
+
+
+    </com.google.android.material.button.MaterialButton>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+<com.google.android.material.button.MaterialButton
+    android:id="@+id/btn_start"
+
+    android:layout_width="fill_parent"
+    android:layout_height="57dp"
+    android:layout_gravity="start"
+    android:layout_marginStart="24dp"
+    android:layout_marginEnd="24dp"
+    android:layout_marginBottom="36dp"
+
+    android:backgroundTint="@color/green_th"
+
+    android:enabled="false"
+    android:text="Iniciar"
+
+    android:textColor="@color/white"
+    app:cornerRadius="35dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.0"
+
+    app:layout_constraintStart_toStartOf="parent">
+
+
+</com.google.android.material.button.MaterialButton>
+
+<Button
+    android:id="@+id/btn_startx"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+    android:visibility="gone"
+    android:layout_marginBottom="@dimen/margin_button_bottom"
+    android:backgroundTint="@color/green_th"
+    android:enabled="false"
+
+    android:text="Iniciar"
+    android:textSize="@dimen/squares_font_size"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
